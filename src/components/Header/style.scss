@@ -1,0 +1,43 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.header{
+  height: 80px;
+  @include blockParams;
+  color: $textColor;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  border-bottom: 2px solid $underlineColor;
+}
+.burger{
+ margin-right: 20px;
+ cursor: pointer;
+}
+.buger_img{
+  display: none;
+}
+.menu{
+  display: flex;
+  list-style: none;
+  cursor: pointer;
+}
+.item_menu{
+  margin-left: 20px;
+  height: 30px;
+  &:hover{
+    color: $underlineColor;
+    border-bottom: 1px solid $textColor;
+  }
+}
+@media screen and (max-width: 1019px){
+  .buger_img{
+    display: block;
+  }
+  .header_navigation{
+    display: none;
+  }
+  .header{
+    justify-content: flex-end;
+  }
+}

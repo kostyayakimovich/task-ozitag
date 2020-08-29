@@ -1,0 +1,8 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.content{
+  @include blockParams;
+  color: $textColor;
+  margin-top: 20px;
+}

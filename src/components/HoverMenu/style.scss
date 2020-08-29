@@ -1,0 +1,21 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.hover_menu{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100px;
+  left: 0;
+  background: $hoverBlock;
+}
+.hover_menu_navigation{
+  @include blockParams;
+  background-color: $underlineColor;
+}
+.item_menu_hover{
+  margin-left: 20px;
+  &:hover{
+    border-bottom: 1px solid $textColor;
+  }
+}
