@@ -10,10 +10,24 @@
   background: $hoverBlock;
 }
 .hover_menu_navigation{
-  @include blockParams;
-  background-color: $underlineColor;
+   background-color: $underlineColor;  
+  margin: 0 auto;
+  width: 940px;
+}
+.el_menu_hover{
+  margin-left: 20px;
+  padding:  10px;
+  &:hover{
+    color: $bgColor;
+  }
+}
+.el_menu_hover_child{
+  &:hover{
+    border-bottom: 1px solid $textColor;
+  } 
 }
 .item_menu_hover{
+  display: flex;
   margin-left: 20px;
   &:hover{
     border-bottom: 1px solid $textColor;

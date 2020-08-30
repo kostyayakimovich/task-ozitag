@@ -1,4 +1,26 @@
 @import "variables";
+
 @mixin blockParams {
 margin: 0 40px 20px 40px;
+  }
+
+  @mixin menuParams {
+    display: flex;
+  list-style: none;
+  cursor: pointer;
+  }
+
+  @mixin burgerMenuChild {
+  margin-left: 20px;    
+  color: $underlineColor;
+  &:hover{
+    color:$bgBlock;
+  }
+  }
+  
+  @mixin chevron($deg) {
+    width: 30px;
+    height: 30px;
+    transform:rotate($deg) ;
+    cursor: pointer;
   }
