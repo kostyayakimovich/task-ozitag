@@ -14,12 +14,15 @@ const HoverMenu = ({ setIsElementHasChild, secondChildElementsMenu }) => {
               >
                 {Array.isArray(el) ? el.map(item =>
                   item.children ?
-                    <div key={item.value} className="el_menu_hover">{item.value}
+                    <div key={item.value} className="el_menu_hover">
+                      <a className="link_menu" href={`#${item.value}`}>{item.value}</a>
                       {item.children.map(elChildren =>
-                        <p key={elChildren} className="el_menu_hover_child">{elChildren}</p>)}
+                        <div key={elChildren} className="el_menu_hover_child">
+                          <a className="link_menu" href={`#${elChildren}`}>{elChildren}</a>
+                        </div>)}
                     </div>
                     : <div key={item.value} className="el_menu_hover">
-                      {item.value}
+                      <a className="link_menu" href={`#${item.value}`}>{item.value}</a>
                     </div>)
                   : null
                 }

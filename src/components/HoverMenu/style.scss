@@ -33,3 +33,10 @@
     border-bottom: 1px solid $textColor;
   }
 }
+.link_menu{
+  text-decoration: none;
+  color:$textColor;
+  &:hover{
+    color:$bgColor;
+  }
+}
